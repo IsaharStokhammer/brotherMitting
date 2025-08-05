@@ -6,33 +6,62 @@
     <title>הזמנה לארוחה בגולדי'ס</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 40px;
+            background-color: #f8f9fa;
+            color: #495057;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
         }
         .container {
             max-width: 600px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
             text-align: center;
         }
         h1 {
-            color: #d9534f;
+            color: #007bff;
+            margin-bottom: 20px;
         }
         .restaurant-info {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fafafa;
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .restaurant-info h2 {
+            color: #28a745;
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-bottom: 15px;
         }
         a {
-            color: #337ab7;
+            color: #007bff;
             text-decoration: none;
         }
         a:hover {
@@ -43,17 +72,17 @@
 <body>
     <div class="container">
         <h1>היי אחים שלי!</h1>
-        <p>אני רוצה להזמין אתכם לאכול איתי ארוחת צהריים מחר בגולדי'ס!</p>
-        <p>בואו נדבר ונאכל אוכל טעים!</p>
-        
+        <p>אני רוצה להזמין אתכם לאכול איתי ארוחת צהריים מחר בגולדי'ס בבני ברק!</p>
+        <p>בואו נתפוס שיחה טובה ונהנה מאוכל טעים.</p>
+
         <div class="restaurant-info">
-            <h2>גולדי'ס - בית ישראל אוכל מוכן ובייקרי</h2>
-            <p><strong>כתובת:</strong> עזרת תורה 18, ירושלים</p>
+            <h2>גולדי'ס - בני ברק</h2>
+            <p><strong>כתובת:</strong> רבי עקיבא 94, בני ברק</p>
             <p><a href="https://www.goldys.co.il/" target="_blank">לחצו כאן כדי לראות את התפריט</a></p>
+            <a href="https://www.google.com/maps/dir/?api=1&origin=%D7%9E%D7%92%D7%93%D7%9C+%D7%A6'%D7%9E%D7%A4%D7%99%D7%95%D7%9F&destination=%D7%A8%D7%91%D7%99+%D7%A2%D7%A7%D7%99%D7%91%D7%90+94,+%D7%91%D7%A0%D7%99+%D7%91%D7%A8%D7%A7&travelmode=driving" class="btn btn-primary" target="_blank">נווט אותי</a>
         </div>
-        
-        <p>אני מחכה לכם!</p>
-        <p>אוהב, אחיכם.</p>
+
+        <p>יאללה בתיאבון!</p>
     </div>
 </body>
 </html>
