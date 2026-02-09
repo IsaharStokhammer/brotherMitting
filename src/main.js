@@ -11,10 +11,10 @@ const render = () => {
         <div class="container">
             ${Header()}
             ${InvitationContent()}
+            ${RSVP()}
             ${Countdown()}
             ${RestaurantCard()}
             ${ActionButtons()}
-            ${RSVP()}
             
             <p class="animate-fade-in delay-500" style="text-align: center; margin-top: 2rem; font-size: 1.1rem; font-weight: 500; color: var(--accent-color);">
                 יאללה בתיאבון! 🍽️

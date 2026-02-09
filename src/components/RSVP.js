@@ -19,34 +19,37 @@ export const RSVP = () => {
     };
 
     return `
-        <div class="rsvp-section animate-fade-in delay-500" style="margin-top: 2.5rem; border-top: 1px solid #eee; padding-top: 2rem;">
-            <button id="rsvp-btn" class="btn btn-primary hover-subtle" style="width: 100%; margin-bottom: 1rem; cursor: pointer; transition: all 0.3s ease;">
-                ברור שאני בא! 🍖
-            </button>
-            
-            <a href="${getCalendarLink()}" target="_blank" class="calendar-link" style="
-                display: block;
-                color: var(--accent-color);
-                font-size: 0.85rem;
-                font-weight: 500;
-                transition: opacity 0.3s ease;
-            ">
-                📅 הוסף תזכורת ליומן גוגל
-            </a>
+        <div class="rsvp-section animate-fade-in delay-400" style="margin: 2rem 0; display: flex; flex-direction: column; gap: 1rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <button id="rsvp-btn" class="btn btn-primary hover-subtle" style="width: 100%; cursor: pointer; transition: all 0.3s ease;">
+                    לאישור הגעה
+                </button>
+                
+                <a href="${getCalendarLink()}" target="_blank" class="btn btn-outline hover-subtle" style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                ">
+                    <span>📅</span> הוספה ליומן
+                </a>
+            </div>
             
             <style>
                 #rsvp-btn.confirmed {
                     background: #28a745 !important;
                     border-color: #28a745 !important;
                     pointer-events: none;
+                    grid-column: span 2;
                 }
-                .calendar-link:hover {
-                    opacity: 0.8;
+                #rsvp-btn.confirmed + a {
+                    display: none;
                 }
             </style>
         </div>
     `;
 };
+
 
 export const initRSVP = () => {
     const btn = document.getElementById('rsvp-btn');
