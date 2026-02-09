@@ -1,0 +1,197 @@
+:root {
+    /* Sophisticated Palette - Ivory, Gold, Deep Slate */
+    --primary-color: #1a1a1a;
+    /* Deep Charcoal */
+    --secondary-color: #f4f1ea;
+    /* Ivory/Soft Cream */
+    --accent-color: #c5a059;
+    /* Muted Gold / Bronze */
+    --text-main: #2c2c2c;
+    --text-muted: #666666;
+    --background-main: #ffffff;
+
+    /* Elegant Border/Shadows */
+    --border-light: rgba(197, 160, 89, 0.2);
+    --shadow-elegant: 0 10px 40px rgba(0, 0, 0, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-blur: blur(10px);
+
+    /* Dimensions */
+    --card-width: 550px;
+    --radius-lg: 12px;
+    --spacing-md: 2rem;
+
+    /* Typography */
+    --font-main: 'Heebo', sans-serif;
+    --font-heading: 'Rubik', sans-serif;
+}
+
+/* --- Global Reset & Utilities --- */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Rubik:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--secondary-color);
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(197, 160, 89, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(197, 160, 89, 0.05) 0%, transparent 40%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    line-height: 1.8;
+}
+
+#app {
+    width: 100%;
+    max-width: var(--card-width);
+    padding: 2.5rem;
+    background: var(--background-main);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-elegant);
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+/* Subtle line above the card */
+#app::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Animations --- */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes letterSpacing {
+    from {
+        letter-spacing: 0.5rem;
+        opacity: 0;
+    }
+
+    to {
+        letter-spacing: -0.02em;
+        opacity: 1;
+    }
+}
+
+@keyframes borderExpand {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 40px;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInSlide 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.animate-title {
+    animation: letterSpacing 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-border {
+    animation: borderExpand 1s 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    width: 0;
+}
+
+.animate-scale {
+    animation: scaleIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 {
+    animation-delay: 200ms;
+}
+
+.delay-200 {
+    animation-delay: 400ms;
+}
+
+.delay-300 {
+    animation-delay: 600ms;
+}
+
+.delay-400 {
+    animation-delay: 800ms;
+}
+
+.delay-500 {
+    animation-delay: 1000ms;
+}
+
+.hover-subtle {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-subtle:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.confetti-piece {
+    position: fixed;
+    top: -10px;
+    width: 8px;
+    height: 12px;
+    z-index: 1000;
+    pointer-events: none;
+    animation: confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}

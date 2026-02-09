@@ -1,0 +1,30 @@
+:root {
+    /* Vivid Palette - Deep Midnight, Neon Blue, Gold */
+    --primary-color: #0f2027;
+    --secondary-color: #203a43;
+    --accent-color: #ffd700; /* Gold */
+    --neon-blue: #00bcd4;
+    --neon-purple: #ab47bc;
+    
+    /* Backgrounds */
+    --bg-gradient: linear-gradient(135deg, #0f2027, #2c5364, #203a43);
+    
+    /* Ultra Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-border-highlight: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-blur: blur(12px);
+
+    /* Text */
+    --text-main: #ffffff;
+    --text-glow: 0 0 10px rgba(255, 255, 255, 0.7);
+
+    /* Dimensions & Spacing */
+    --card-width: 600px;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    
+    /* Animation Timing */
+    --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

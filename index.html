@@ -1,101 +1,23 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>הזמנה לארוחה בגולדי'ס</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            margin: 40px;
-            background-color: #f8f9fa;
-            color: #495057;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            background-image: url('https://media.getmood.io/warehouse/dynamic/220585.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        .container {
-            max-width: 600px;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-            text-align: center;
-        }
-        h1 {
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-        .restaurant-info {
-            margin-top: 25px;
-            padding: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
-        .restaurant-info h2 {
-            color: #28a745;
-            margin-top: 0;
-        }
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: 500;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            color: white;
-            border: none;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="src/styles/global.css">
 </head>
-<body>
-    <div class="container">
-        <h1>היי אחים שלי!</h1>
-        <p>זוכרים את הסיכום לגבי יום רביעי?</p>
-        <p>אז איכשהו יצא שזה בדיוק מחר!</p>
-        <p>אני כבר רעב ומחכה לראות אתכם.</p>
-        <p>תהיה אחלה פגישה!</p>
-        <div class="restaurant-info">
-            <h2>גולדי'ס - בני ברק</h2>
-            <p><strong>כתובת:</strong> מצדה 9, בני ברק</p>
-            <p><a href="https://www.goldys.co.il/" target="_blank">לחצו כאן כדי לראות את התפריט</a></p>
-            <div class="btn-group">
-                <a href="https://www.google.com/maps/dir/Champion+Tower,+Derech+Sheshet+HaYamim+30,+Bnei+Brak,+Israel/%D7%9E%D7%A6%D7%93%D7%94+9,+%D7%91%D7%A0%D7%99+%D7%91%D7%A8%D7%A7,+%D7%99%D7%A9%D7%A8%D7%90%D7%9C%E2%80%AD/data=!4m14!4m13!1m5!1m1!19sChIJAQAByYdJHRUR_DkaHt071Yc!2m2!1d34.8280556!2d32.0983333!1m5!1m1!19sChIJpVmsQilKHRURTlLc65KIbto!2m2!1d34.824481999999996!2d32.093707699999996!3e0" class="btn btn-primary" target="_blank">אני בא ברכב</a>
-                <a href="https://www.google.com/maps/dir/Champion+Tower,+Derech+Sheshet+HaYamim+30,+Bnei+Brak,+Israel/%D7%9E%D7%A6%D7%93%D7%94+9,+%D7%91%D7%A0%D7%99+%D7%91%D7%A8%D7%A7,+%D7%99%D7%A9%D7%A8%D7%90%D7%9C%E2%80%AD/data=!4m14!4m13!1m5!1m1!19sChIJAQAByYdJHRUR_DkaHt071Yc!2m2!1d34.8280556!2d32.0983333!1m5!1m1!19sChIJpVmsQilKHRURTlLc65KIbto!2m2!1d34.824481999999996!2d32.093707699999996!3e2" class="btn btn-primary" target="_blank">אני בא ברגל</a>
-            </div>
-        </div>
 
-        <p>יאללה בתיאבון!</p>
+<body>
+    <div id="app">
+        <!-- Fallback if JS/Modules fail locally -->
+        <div style="text-align: center; padding: 50px; color: white; font-family: sans-serif;">
+            <p>במידה וההזמנה לא נטענת, יש להריץ את התיקייה באמצעות שרת מקומי (Local Server) או להעלות ל-GitHub Pages.
+            </p>
+            <p>לצפייה מיידית, מומלץ להשתמש בתוסף Live Server ב-VS Code.</p>
+        </div>
     </div>
+    <script type="module" src="src/main.js"></script>
 </body>
+
 </html>
