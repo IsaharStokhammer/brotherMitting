@@ -1,11 +1,15 @@
 export const InvitationContent = () => {
     const getDynamicText = () => {
-        const now = new Date();
+        const actualNow = new Date();
+        // Shift time by -6 hours so the day "starts" at 06:00 AM
+        const now = new Date(actualNow.getTime() - (6 * 60 * 60 * 1000));
+
         const targetDay = 3; // Wednesday
         let daysUntil = (targetDay - now.getDay() + 7) % 7;
 
         // If it's Wednesday but past 12:00, target next Wednesday
-        if (daysUntil === 0 && now.getHours() >= 12) {
+        // Note: we use actualNow here to check the real time for the meeting itself
+        if (daysUntil === 0 && actualNow.getDay() === 3 && actualNow.getHours() >= 12) {
             daysUntil = 7;
         }
 
@@ -14,6 +18,7 @@ export const InvitationContent = () => {
         if (daysUntil === 2) return "זה כבר <span style='color: var(--primary-color); font-weight: 700; border-bottom: 1px solid var(--accent-color);'>מחרתיים!</span>";
         return `זה בעוד <span style='color: var(--primary-color); font-weight: 700; border-bottom: 1px solid var(--accent-color);'>${daysUntil} ימים</span>`;
     };
+
 
     return `
         <div class="invitation-text" style="

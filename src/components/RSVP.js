@@ -1,11 +1,18 @@
 export const RSVP = () => {
     // Generate Google Calendar Link
     const getCalendarLink = () => {
-        const now = new Date();
-        let target = new Date();
-        target.setDate(now.getDate() + (3 + 7 - now.getDay()) % 7);
+        const actualNow = new Date();
+        const now = new Date(actualNow.getTime() - (6 * 60 * 60 * 1000));
+
+        let target = new Date(actualNow);
+        target.setDate(actualNow.getDate() + (3 + 7 - now.getDay()) % 7);
         target.setHours(12, 0, 0, 0);
-        if (now > target) target.setDate(target.getDate() + 7);
+
+        // If it's Wednesday past 12:00 (actual time), target next Wednesday
+        if (actualNow.getDay() === 3 && actualNow.getHours() >= 12) {
+            target.setDate(target.getDate() + 7);
+        }
+
 
         const end = new Date(target);
         end.setHours(14, 0, 0, 0); // Assume 2 hour lunch
@@ -31,7 +38,7 @@ export const RSVP = () => {
                     justify-content: center;
                     gap: 0.5rem;
                 ">
-                    <span>📅</span> הוספה ליומן
+                    <span>📅</span> הוספה ליומן גוגל
                 </a>
             </div>
             
